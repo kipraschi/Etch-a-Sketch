@@ -4,7 +4,7 @@ const rainbowBtn = document.querySelector("#rainbow");
 const monoBtn = document.querySelector("#mono");
 const clearBtn = document.querySelector("#clear");
 
-let rainbow = true;
+let rainbow = false;
 let gridSize = 16;
 
 makeGrid(gridSize);
@@ -86,8 +86,3 @@ function randomRGB() {
     let b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`;
 }
-
-// function erase(element) {
-//     element.style.backgroundColor = `rgba(0, 0, 0, 0)`;
-//     element.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))`;
-// }
