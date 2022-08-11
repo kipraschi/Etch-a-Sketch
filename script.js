@@ -1,10 +1,12 @@
 const container = document.querySelector("#container");
-const sizeBtn = document.querySelector("#size");
 const rainbowBtn = document.querySelector("#rainbow");
+// const eraserBtn = document.querySelector("#eraser");
 const monoBtn = document.querySelector("#mono");
+const sizeBtn = document.querySelector("#size");
 const clearBtn = document.querySelector("#clear");
 
 let rainbow = true;
+// let eraser = false;
 let gridSize = 16;
 
 makeGrid(gridSize);
@@ -17,6 +19,7 @@ rainbowBtn.addEventListener("click", () => {
     rainbow = true;
     makeGrid()
 });
+// clearBtn.addEventListener("click", () => eraser = true);
 clearBtn.addEventListener("click", makeGrid);
 sizeBtn.addEventListener("click", () => makeGrid(getSize()));
 
@@ -39,6 +42,7 @@ function makeGrid() {
 		let square = document.createElement("div");
 		square.classList.add("squares");
 		square.addEventListener("mouseover", () => {
+            // if (eraser) erase(square);
             if(rainbow) addRandomColor(square);
             else addMonoColor(square);
         });
